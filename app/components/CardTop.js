@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 
 export default function CardTop({ item }) {
-  console.log({ item }, 'top card')
+
   return (
     <View style={styles.imageContainer}>
       <Image style={styles.image} source={item?.image} />
@@ -14,20 +14,21 @@ export default function CardTop({ item }) {
 const styles = StyleSheet.create({
   imageContainer: {
     width: 120,
-    height: 150,
+    height: 120,
     justifyContent: 'space-evenly',
     marginVertical: 20,
     paddingHorizontal: 20,
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 88,
+    height: 88,
     borderRadius: 10,
   },
   title: {
     width: 100,
+    fontSize: 14,
     textAlign: 'center',
     fontWeight: 'bold',
-    color: '#2c3e50',
+    color: '#4A4B4D',
   },
 })

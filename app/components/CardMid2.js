@@ -8,10 +8,10 @@ export default function CardMid2({ item }) {
       <Image style={styles.image} source={item?.image} />
       <Text style={styles.title}>{item?.title}</Text>
       <View style={styles.cardView}>
-        <Text style={{ marginRight: 20, color: '#95a5a6' }}>
+        <Text style={{ marginRight: 20, color: '#B6B7B7' }}>
           Cafe . Western Food
         </Text>
-        <AntDesign name='star' size={15} color='orange' />
+        <AntDesign name='star' size={15} color='#FC6011' />
         <Text>{item?.rate}</Text>
       </View>
     </View>
@@ -20,14 +20,14 @@ export default function CardMid2({ item }) {
 
 const styles = StyleSheet.create({
   imageContainer: {
-    width: 450,
+    width: 350,
     height: 250,
     justifyContent: 'space-evenly',
     marginVertical: 20,
     paddingHorizontal: 20,
   },
   image: {
-    width: 350,
+    width: 300,
     height: 200,
     borderRadius: 20,
   },
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     width: '100%',
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#2c3e50',
+    color: '#4A4B4D',
   },
   cardView: {
     flexDirection: 'row',

@@ -3,13 +3,13 @@ import { View, Text, Image, StyleSheet } from 'react-native'
 import { AntDesign } from '@expo/vector-icons'
 
 export default function CardMid({ item }) {
-  console.log({ item }, 'middle card')
+  
   return (
     <View>
       <Image style={styles.image} source={item?.image} />
       <Text style={styles.title}>{item?.title}</Text>
       <View style={styles.cardView}>
-        <AntDesign name='star' size={15} color='orange' />
+        <AntDesign name='star' size={15} color='#FC6011' />
         <Text>{item?.rate}</Text>
         <Text style={{ color: '#95a5a6' }}>
           {' '}
@@ -23,13 +23,13 @@ export default function CardMid({ item }) {
 const styles = StyleSheet.create({
   image: {
     width: '100%',
-    height: 200,
+    height: 193,
   },
   title: {
     width: '100%',
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#2c3e50',
+    color: '#4A4B4D',
     paddingStart: 20,
   },
   cardView: {

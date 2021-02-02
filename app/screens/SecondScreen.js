@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, FlatList, ImageBackground } from 'react-native'
+import { View, StyleSheet, FlatList, Image } from 'react-native'
 import CardSecPage from '../components/CardSecPage'
 import HeaderTitle from '../components/HeaderTitle'
 import TextInputComp from '../components/TextInputComp'
@@ -15,19 +15,15 @@ export default function SecondScreen() {
       </View>
 
       <View style={styles.containerList}>
-        <ImageBackground
-          source={img}
-          style={styles.image}
-        >
-          <FlatList
-            
-            showsHorizontalScrollIndicator={false}
-            horizontal={false}
-            data={data.itemSecPage}
-            renderItem={({ item }) => <CardSecPage item={item} />}
-            keyExtractor={(item) => item.id.toString()}
-          />
-        </ImageBackground>
+        <Image source={img} style={styles.image} />
+        <FlatList
+          showsHorizontalScrollIndicator={false}
+          horizontal={false}
+          data={data.itemSecPage}
+          renderItem={({ item }) => <CardSecPage item={item} />}
+          keyExtractor={(item) => item.id.toString()}
+          style={styles.flat}
+        />
       </View>
     </View>
   )
@@ -39,7 +35,6 @@ const styles = StyleSheet.create({
   },
   containerList: {
     flex: 1,
-
   },
   top: {
     margin: 20,
@@ -47,18 +42,8 @@ const styles = StyleSheet.create({
   image: {
     height: 485,
     width: 97,
-    flex: 1,
-    
   },
-
-  orangeBloc: {
-    zIndex: 0,
-    backgroundColor: '#FC6011',
-    height: 485,
-    width: 97,
-    left: 0,
-    top: 50,
-    borderTopRightRadius: 45,
-    borderBottomRightRadius: 45,
+  flat: {
+    position: 'absolute',
   },
 })

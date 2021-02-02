@@ -24,7 +24,10 @@ export default function FirstScreen() {
             />
             <View style={styles.delivering}>
               <Text>Delivering to</Text>
-              <DropDownPickerComponent />
+              <DropDownPickerComponent
+                taille={'55%'}
+                text={'Current Location'}
+              />
               <TextInputComp />
             </View>
             <HeaderTitle

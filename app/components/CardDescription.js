@@ -1,18 +1,21 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { AntDesign } from '@expo/vector-icons'
+import ButtonComp from './ButtonComp'
 
-export default function CardSecPage({ item }) {
+export default function CardDescription({ title, subtitle }) {
   return (
     <View style={styles.imageContainer}>
-      <Image style={styles.image} source={item?.image} />
       <View style={styles.text}>
-        <Text style={styles.title1}>{item?.title}</Text>
-        <Text style={styles.title2}>{item?.comment} items</Text>
+        <Text style={styles.title1}>{title}</Text>
+        <Text style={styles.title2}>{subtitle}</Text>
+        <ButtonComp text={'Add to Cart'} color={'orange'} />
       </View>
       <View style={styles.icons}>
-        <AntDesign name='rightcircleo' size={30} color='#EE5A30' />
+        <View style={styles.iconsBackground}>
+          <AntDesign name='shoppingcart' size={33} color='#EE5A30' />
+        </View>
       </View>
     </View>
   )
@@ -21,49 +24,44 @@ export default function CardSecPage({ item }) {
 const styles = StyleSheet.create({
   imageContainer: {
     flexDirection: 'row',
-    width: '75%',
-    marginBottom: 15,
+    width: '80%',
+
     alignItems: 'center',
-    marginLeft: 60,
-    marginTop: 15,
+    marginLeft: 25,
+    marginTop: 20,
+    marginRight: 60,
+    marginBottom: 30,
     backgroundColor: 'white',
     borderTopLeftRadius: 35,
     borderBottomLeftRadius: 35,
     borderTopRightRadius: 20,
     borderBottomRightRadius: 20,
-    marginRight: 60,
+
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 6,
     borderWidth: 1,
     borderColor: '#ddd',
   },
-
-  image: {
-    width: 70,
-    height: 70,
-    marginLeft: -35,
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    borderColor: '#ddd',
+  icons: {
+    // marginLeft: 40,
   },
   text: {
     width: '85%',
-    height: 87,
-    paddingStart: 30,
+    height: 122,
+    alignItems: 'center',
     justifyContent: 'center',
   },
   title1: {
+    fontSize: 11,
+    color: '#B6B7B7',
+  },
+  title2: {
     fontSize: 22,
     fontWeight: 'bold',
     color: '#4A4B4D',
   },
-  title2: {
-    fontSize: 11,
-    color: '#B6B7B7',
-  },
-  icons: {
-    marginLeft: -20,
+  iconsBackground: {
     backgroundColor: 'white',
     borderRadius: 50,
     height: 60,
@@ -75,5 +73,6 @@ const styles = StyleSheet.create({
     elevation: 6,
     borderWidth: 1,
     borderColor: '#ddd',
+    marginLeft: 10,
   },
 })

@@ -1,19 +1,19 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import DropDownPicker from 'react-native-dropdown-picker'
 
-
-export default function DropDownPickerComponent() {
+export default function DropDownPickerComponent({ taille, text }) {
   return (
     <DropDownPicker
       items={[
         {
-          label: 'Current Location',
-          value: 'Current Location',
+          label: text,
+          value: text,
           hidden: true,
         },
       ]}
-      defaultValue={'Current Location'}
-      containerStyle={{ width: '55%', height: 50 }}
+      defaultValue={text}
+      containerStyle={{ width: taille, height: 50 }}
       style={{ backgroundColor: '#fafafa' }}
       itemStyle={{
         justifyContent: 'flex-start',

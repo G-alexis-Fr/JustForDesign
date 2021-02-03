@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: '#4A4B4D',
+    fontFamily: 'altis',
   },
   title2: {
     fontSize: 11,
